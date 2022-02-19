@@ -1,0 +1,191 @@
+@import "https://fonts.googleapis.com/css?family=Share+Tech+Mono";
+
+* {
+  color: white;
+  font-size: 10px;
+}
+
+body {
+  background: #c2c2d6;
+  min-height: 300px;
+}
+
+.content-container {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+
+  transform: translate(-50%, -70%);
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  background-color: black;
+  border: 2px solid #47476b;
+  height: 60vh;
+  min-height: 200px;
+  width: 25vw;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.label-container {
+  text-align: center;
+}
+
+.label {
+  color: black;
+  font-size: 1.8em;
+  font-family: "Orbitron";
+}
+
+.label-name {
+  color: #47476b;
+  font-size: 1.6em;
+  font-family: "Orbitron";
+  font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+  .label-container {
+    font-size: 0.8em;
+  }
+}
+
+.calculator-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-family: "Orbitron", sans-serif;
+  text-align: right;
+}
+
+.upper-screen {
+  flex: 1;
+  color: orange;
+  overflow-wrap: break-word;
+  font-size: 1.4em;
+}
+
+.lower-screen {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-wrap: break-word;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.buttons-container {
+  height: 50vh;
+  display: grid;
+  width: 100%;
+  min-height: 80%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1px;
+  grid-template-areas:
+    "AC AC division multiplication"
+    "seven eight nine subtraction"
+    "four five six addition"
+    "one two three equal"
+    "zero zero decimal equal";
+}
+
+.button {
+  display: flex;
+  outline: 1px solid black;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8em;
+  font-family: Share Tech Mono, sans;
+  transition: color 0.3s ease-in-out;
+}
+
+.button:hover {
+  color: orange;
+  outline: 0.05em solid rgb(128, 128, 128);
+  z-index: 3;
+  cursor: pointer;
+}
+
+.button:active {
+  width: 102%;
+  height: 102%;
+}
+
+.number {
+  background-color: #4d4d4d;
+}
+
+.operator {
+  background-color: rgb(102, 102, 102);
+}
+
+.equal {
+  background-color: rgb(0, 68, 102);
+}
+
+.ac {
+  background-color: rgb(172, 57, 57);
+}
+
+.item-AC {
+  grid-area: AC;
+}
+.item-division {
+  grid-area: division;
+}
+.item-multiplication {
+  grid-area: multiplication;
+}
+
+.item-seven {
+  grid-area: seven;
+}
+.item-eight {
+  grid-area: eight;
+}
+.item-nine {
+  grid-area: nine;
+}
+
+.item-four {
+  grid-area: four;
+}
+.item-five {
+  grid-area: five;
+}
+.item-six {
+  grid-area: six;
+}
+
+.item-three {
+  grid-area: three;
+}
+.item-two {
+  grid-area: two;
+}
+.item-one {
+  grid-area: one;
+}
+.item-zero {
+  grid-area: zero;
+}
+
+.item-subtraction {
+  grid-area: subtraction;
+}
+.item-addition {
+  grid-area: addition;
+}
+.item-equal {
+  grid-area: equal;
+}
+
+.item-decimal {
+  grid-area: decimal;
+}
